@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   &:before{
     content:'';
     content: "";
@@ -21,7 +21,7 @@ body {
     left: 0;
     top: 0;
     z-index: -1;
-    background-position: 50% 50%;
+    background-position: 70% 30%;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -34,11 +34,11 @@ body {
 .adjacent-post{
   & .arrow-btn{
     transition: width 300ms ease;
-    width: 50px;
+    width: 30px;
   }
   &:hover{
     & .arrow-btn{
-      width: 60px;
+      width: 40px;
     }
   }
 }
@@ -61,4 +61,5 @@ a {
 
 * {
   box-sizing: border-box;
+  
 }
