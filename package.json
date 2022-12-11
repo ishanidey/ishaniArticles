@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next --openssl-legacy-provider start ",
     "lint": "next lint"
   },
   "dependencies": {
