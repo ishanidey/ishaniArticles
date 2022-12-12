@@ -13,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "framer-motion": "^7.6.19",
     "graphql": "^15.8.0",
     "graphql-request": "^3.7.0",

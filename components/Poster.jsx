@@ -7,7 +7,7 @@ import Link from 'next/link';
 // import './Poster.scss';
 
 const Poster = () => (
-  <div className="app__header app__flex">
+  <div className="app__header app__flex bg-gray-400">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
