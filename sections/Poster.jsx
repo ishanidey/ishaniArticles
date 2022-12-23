@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 // import { AppWrap } from '../../wrapper';
@@ -7,16 +8,22 @@ import Link from 'next/link';
 
 const Poster = () => (
   <div className="app__header app__flex bg-gray-400">
-    <h1 className="heading"><Link href="https://ishanidey.netlify.app/">View my portfolio website</Link></h1>
-    <div className="app__header-badge">
-      <div className="badge-cmp app__flex">
-        <div style={{ marginLeft: 20 }}>
-          <p>Hi there, 👋 </p>
-          <p className="text">Ishani Dey blog</p>
-          <p> I write articles on web development.</p>
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 1 }}
+      className="app__header-info"
+    >
+      <h1 className="heading"><Link href="https://ishanidey.netlify.app/">View my portfolio website</Link></h1>
+      <div className="app__header-badge">
+        <div className="badge-cmp app__flex">
+          <div style={{ marginLeft: 20 }}>
+            <p>Hi there, 👋 </p>
+            <p className="text">Ishani Dey blog</p>
+            <p> I write articles on web development.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   </div>
 );
 

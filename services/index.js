@@ -13,15 +13,14 @@ export const getPosts = async () => {
             author {
               bio
               name
-              id
-              location
               createdAt
+              location
+              id
               photo {
                 url
               }
             }
             createdAt
-            updatedAt
             slug
             title
             excerpt
@@ -87,13 +86,12 @@ export const getPostDetails = async (slug) => {
           name
           bio
           createdAt
-          location
+              location
           photo {
             url
           }
         }
         createdAt
-        updatedAt
         slug
         content {
           raw
@@ -123,7 +121,6 @@ export const getSimilarPosts = async (categories, slug) => {
           url
         }
         createdAt
-        updatedAt
         slug
       }
     }
@@ -146,7 +143,6 @@ export const getAdjacentPosts = async (createdAt, slug) => {
           url
         }
         createdAt
-        updatedAt
         slug
       }
       previous:posts(
@@ -159,7 +155,6 @@ export const getAdjacentPosts = async (createdAt, slug) => {
           url
         }
         createdAt
-        updatedAt
         slug
       }
     }
@@ -180,9 +175,9 @@ export const getCategoryPost = async (slug) => {
             author {
               bio
               name
-              id
-              location
               createdAt
+              location
+              id
               photo {
                 url
               }
@@ -215,7 +210,8 @@ export const getFeaturedPosts = async () => {
       posts(where: {featuredPost: true}) {
         author {
           name
-          location
+          createdAt
+              location
           photo {
             url
           }
