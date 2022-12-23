@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
-import { FaArrowCircleDown } from 'react-icons/fa';
-import { Button } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { FaAngleDown } from 'react-icons/fa';
 
-const ScrollButton = () => {
-  const [visible, setVisible] = useState(true);
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 0) {
-      setVisible(false);
-    } else if (scrolled <= 0) {
-      setVisible(true);
-    }
-  };
-  const scrollToBottom = () => {
+const ScrollToBottom = () => {
+  const [showTopBtn, setShowTopBtn] = useState(true);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < 0) {
+        setShowTopBtn(false);
+      } else {
+        setShowTopBtn(true);
+      }
+    });
+  }, []);
+  const goToBottom = () => {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
-      behavior: 'auto',
+      behavior: 'smooth',
     });
   };
-
-  window.addEventListener('scroll', toggleVisible);
-
   return (
-    <Button>
-      <FaArrowCircleDown onClick={scrollToBottom} style={{ display: visible ? 'inline' : 'none' }} />
-    </Button>
+    <div className="top-to-btm">
+      {' '}
+      {showTopBtn && (
+      <FaAngleDown
+        className="icon-position-bottom icon-style"
+        onClick={goToBottom}
+      />
+      )}{' '}
+    </div>
   );
 };
-
-export default ScrollButton;
+export default ScrollToBottom;

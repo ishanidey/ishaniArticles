@@ -5,7 +5,8 @@ const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 export const getPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection {
+      postsConnection (first:100
+         orderBy: createdAt_ASC) {
         edges {
           cursor
           node {
@@ -13,11 +14,14 @@ export const getPosts = async () => {
               bio
               name
               id
+              location
+              createdAt
               photo {
                 url
               }
             }
             createdAt
+            updatedAt
             slug
             title
             excerpt
@@ -57,7 +61,8 @@ export const getCategories = async () => {
 export const getSB = async () => {
   const query = gql`
   query MyQuery {
-    posts(where: {}) {
+    posts(where: {}
+       first:100) {
       title
       slug
     }
@@ -81,11 +86,14 @@ export const getPostDetails = async (slug) => {
         author{
           name
           bio
+          createdAt
+          location
           photo {
             url
           }
         }
         createdAt
+        updatedAt
         slug
         content {
           raw
@@ -108,13 +116,14 @@ export const getSimilarPosts = async (categories, slug) => {
     query GetPostDetails($slug: String!, $categories: [String!]) {
       posts(
         where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}}}
-        last: 10
+        last: 100
       ) {
         title
         featuredImage {
           url
         }
         createdAt
+        updatedAt
         slug
       }
     }
@@ -137,6 +146,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
           url
         }
         createdAt
+        updatedAt
         slug
       }
       previous:posts(
@@ -149,6 +159,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
           url
         }
         createdAt
+        updatedAt
         slug
       }
     }
@@ -170,6 +181,8 @@ export const getCategoryPost = async (slug) => {
               bio
               name
               id
+              location
+              createdAt
               photo {
                 url
               }
@@ -202,6 +215,7 @@ export const getFeaturedPosts = async () => {
       posts(where: {featuredPost: true}) {
         author {
           name
+          location
           photo {
             url
           }

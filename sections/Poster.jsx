@@ -17,7 +17,7 @@ const Poster = () => (
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
           <div style={{ marginLeft: 20 }}>
-            <p>Hi there, 👋 my name is</p>
+            <p>Hi there, 👋 </p>
             <p className="text">Ishani Dey blog</p>
             <p> I write articles on web development.</p>
           </div>

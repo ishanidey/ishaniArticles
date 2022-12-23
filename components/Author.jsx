@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import moment from 'moment';
 
 import { grpahCMSImageLoader } from '../util';
 
@@ -18,6 +19,8 @@ const Author = ({ author }) => (
     </div>
     <h3 className="text-black mt-4 mb-4 text-xl font-bold">Writer:✈️{author.name}</h3>
     <p className="text-black text-ls">{author.bio}😊</p>
+    <span className="align-middle">Joined: {moment(author.createdAt).format('MMM DD, YYYY')}</span>
+    <p className="text-black text-ls">{author.location}</p>
   </div>
 );
 
