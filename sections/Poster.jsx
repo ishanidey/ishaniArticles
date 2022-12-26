@@ -7,7 +7,7 @@ import Link from 'next/link';
 // import './Poster.scss';
 
 const Poster = () => (
-  <div className="app__header app__flex bg-gray-400">
+  <div className="app__header app__flex poster">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 1 }}
@@ -18,7 +18,8 @@ const Poster = () => (
         <div className="badge-cmp app__flex">
           <div style={{ marginLeft: 20 }}>
             <p>Hi there, 👋 </p>
-            <p className="text">Ishani Dey blog</p>
+            <p>welcome to </p>
+            <p className="text">ishaniDeyBlogs💡</p>
             <p> I write articles on web development.</p>
           </div>
         </div>

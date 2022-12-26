@@ -17,10 +17,12 @@ const Author = ({ author }) => (
         src={author.photo.url}
       />
     </div>
-    <h3 className="text-black mt-4 mb-4 text-xl font-bold">Writer:✈️{author.name}</h3>
-    <p className="text-black text-ls">{author.bio}😊</p>
-    <span className="align-middle">Joined: {moment(author.createdAt).format('MMM DD, YYYY')}</span>
-    <p className="text-black text-ls">{author.location}</p>
+    <div className="author">
+      <h3 className="header-style mt-4 mb-4 text-2xl font-bold">Writer:✈️{author.name}</h3>
+      <p className="text-black text-xl">{author.bio}😊</p>
+      <span className="align-middle">Joined: {moment(author.createdAt).format('MMM DD, YYYY')}</span>
+      <p className="text-black text-ls">{author.location}</p>
+    </div>
   </div>
 );
 

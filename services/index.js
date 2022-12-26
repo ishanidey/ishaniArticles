@@ -6,7 +6,7 @@ export const getPosts = async () => {
   const query = gql`
     query MyQuery {
       postsConnection (first:100
-         orderBy: createdAt_ASC) {
+         orderBy: createdAt_DESC) {
         edges {
           cursor
           node {
@@ -264,7 +264,7 @@ export const getRecentPosts = async () => {
     query GetPostDetails() {
       posts(
         orderBy: createdAt_ASC
-        last: 5
+        last: 10
       ) {
         title
         featuredImage {
