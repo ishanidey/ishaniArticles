@@ -15,8 +15,6 @@ const SearchBar = () => {
   return (
     <>
       <p className="text-4xl container mx-auto px-10 mb-8 mt-8 searchBar-style font-bold">Articles</p>
-      <p className="text-2xl container mx-auto px-10 mb-8 navbar-style">You will find articles about web design, web development and related topics. Here we also feature inspirational collections, opinions and articles about best practices.
-      </p>
       <div className="container mx-auto px-10 mb-8">
         <div className="border-b w-full inline-block border-black-400 py-2">
           <div className="hidden md:float-left md:contents">

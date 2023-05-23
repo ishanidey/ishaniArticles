@@ -3,22 +3,22 @@ import Image from 'next/image';
 import moment from 'moment';
 import Link from 'next/link';
 
-import { grpahCMSImageLoader } from '../util';
+import { graphCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => (
   <div className=" p-0 lg:p-1 pb-4 mb-4 border-b">
     <div className="relative overflow-hidden pb-40 mb-4 border-b">
-      <img src={post.featuredImage.url} alt="" className="object-top absolute h-60 w-half object-cover  shadow-lg rounded-t-lg " />
+      <img src={post.featuredImage.url} alt="" className="object-top absolute h-30 w-half object-cover  shadow-lg rounded-t-lg " />
     </div>
 
-    <h2 className="transition duration-700 mb-4 cursor-pointer font-semibold text-3xl header-style">
+    <h2 className="transition duration-700 mb-4 cursor-pointer font-semibold text-xl header-style">
       <Link href={`/post/${post.slug}`}>{post.title}</Link>
     </h2>
     <div className="block lg:flex mb-8 w-half">
       <div className="flex mb-4 lg:mb-0 w-half lg:w-auto mr-8 border-b">
         <Image
           unoptimized
-          loader={grpahCMSImageLoader}
+          loader={graphCMSImageLoader}
           alt={post.author.name}
           height="30px"
           width="30px"
