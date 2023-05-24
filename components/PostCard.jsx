@@ -7,9 +7,6 @@ import { graphCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => (
   <div className=" p-0 lg:p-1 pb-4 mb-4 border-b">
-    <div className="relative overflow-hidden pb-40 mb-4 border-b">
-      <img src={post.featuredImage.url} alt="" className="object-top absolute h-30 w-half object-cover  shadow-lg rounded-t-lg " />
-    </div>
 
     <h2 className="transition duration-700 mb-4 cursor-pointer font-semibold text-xl header-style">
       <Link href={`/post/${post.slug}`}>{post.title}</Link>
