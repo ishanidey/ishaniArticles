@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 // import { AppWrap } from '../../wrapper';
 // import { images } from '../../constants';
@@ -7,13 +6,11 @@ import Link from 'next/link';
 
 const Poster = () => (
   <div className="app__header app__flex poster">
-    <h1 className="heading"><Link href="https://ishanidey.netlify.app/">View my portfolio website</Link></h1>
     <div className="app__header-badge">
       <div className="badge-cmp app__flex">
         <div style={{ marginLeft: 20 }}>
           <p>Hi there, 👋 </p>
-          <p>welcome to </p>
-          <p className="text">ishaniDeyBlogs💡</p>
+          <p>welcome</p>
           <p> I write articles on web development.</p>
         </div>
       </div>

@@ -90,10 +90,10 @@ const CommentsForm = ({ slug }) => {
           <label className="text-gray-500 cursor-pointer" htmlFor="storeData"> Save my name, email in this browser for the next time I comment.</label>
         </div>
       </div>
-      {error && <p className="text-xs text-red-500">All fields are mandatory</p>}
+      {error && <p>All fields are mandatory</p>}
       <div className="mt-8">
         <button type="button" onClick={handlePostSubmission} className="transition duration-500 ease hover:bg-indigo-300 inline-block bg-indigo-500 text-lg font-mediums text-black px-8 py-3 cursor-pointer">Post Comment</button>
-        {showSuccessMessage && <span className="text-xl float-right font-semibold mt-3 text-green-500">Comment submitted for review</span>}
+        {showSuccessMessage && <span className="">Comment submitted for review</span>}
       </div>
     </div>
   );

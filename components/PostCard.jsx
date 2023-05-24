@@ -24,16 +24,16 @@ const PostCard = ({ post }) => (
         />
         <p className="inline text-gray-700 ml-2 font-medium text-lg border-b">{post.author.name}</p>
       </div>
-      <div className="font-extrabold">
-        <span className="align-middle">Post updated at:📅{moment(post.createdAt).format('MMM DD, YYYY')}</span>
+      <div>
+        <span className="align-middle">Post updated at:{moment(post.createdAt).format('MMM DD, YYYY')}</span>
       </div>
     </div>
-    <h4 className="text-2xl">
+    <h4>
       {post.excerpt}
     </h4>
     <div className="text-center mb-11 mt-11">
       <Link href={`/post/${post.slug}`}>
-        <span className="cursor-pointer button">Continue Reading🧐</span>
+        <span className="cursor-pointer button">read more</span>
       </Link>
     </div>
   </div>
