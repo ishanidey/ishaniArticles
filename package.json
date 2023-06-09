@@ -45,5 +45,17 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "postcss": "^8.3.8",
     "tailwindcss": "^2.2.7"
-  }
+  },
+  "description": "��#\u0000 \u0000u\u0000s\u0000e\u0000r\u0000o\u0000l\u0000o\u0000g\u0000y\u0000_\u0000q\u0000u\u0000e\u0000s\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishanidey/ishaniArticles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishanidey/ishaniArticles/issues"
+  },
+  "homepage": "https://github.com/ishanidey/ishaniArticles#readme"
 }

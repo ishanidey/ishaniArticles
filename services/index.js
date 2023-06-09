@@ -14,7 +14,6 @@ export const getPosts = async () => {
               bio
               name
               createdAt
-              location
               id
               photo {
                 url
@@ -86,7 +85,6 @@ export const getPostDetails = async (slug) => {
           name
           bio
           createdAt
-              location
           photo {
             url
           }
@@ -176,7 +174,6 @@ export const getCategoryPost = async (slug) => {
               bio
               name
               createdAt
-              location
               id
               photo {
                 url
@@ -211,7 +208,6 @@ export const getFeaturedPosts = async () => {
         author {
           name
           createdAt
-              location
           photo {
             url
           }
